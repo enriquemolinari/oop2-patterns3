@@ -1,6 +1,7 @@
 package observer.ui;
 
 import javax.swing.*;
+import java.util.List;
 
 public class Main {
 
@@ -14,6 +15,8 @@ public class Main {
     }
 
     private void start() {
-        new CajeroUI(new SwingMonitorDeCuenta()).iniciar();
+        new CajeroUI(List.of(new SwingMonitorDeCuenta(),
+                new ConsoleMonitor(),
+                new EmailMonitor())).iniciar();
     }
 }

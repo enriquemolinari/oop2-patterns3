@@ -1,10 +1,12 @@
 package observer.ui;
 
+import observer.model.Observer;
+
 import javax.swing.*;
 import java.awt.*;
 
 
-public class SwingMonitorDeCuenta {
+public class SwingMonitorDeCuenta implements Observer {
     private JLabel label;
 
     public SwingMonitorDeCuenta() {
@@ -19,7 +21,12 @@ public class SwingMonitorDeCuenta {
         frame.setVisible(true);
     }
 
-    public void nuevoMonto(String data) {
-        label.setText(data);
+//    public void nuevoMonto(String data) {
+//        label.setText(data);
+//    }
+
+    @Override
+    public void actualizar(String info) {
+        label.setText(info);
     }
 }
