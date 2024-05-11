@@ -1,39 +1,35 @@
 package strategy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 enum TipoLlamada {
     NACIONAL,
     INTERNACIONAL
 }
 
 class Llamada {
-    public TipoLlamada tipo;
-    public double duracion;
+    private TipoLlamada tipo;
+    private double duracion;
+    private Map<String, CalculadorLlamada> estrategiasCalculo = new HashMap<>();
 
     public Llamada(TipoLlamada tipo, double duracion) {
         this.tipo = tipo;
         this.duracion = duracion;
+        this.estrategiasCalculo.put(TipoLlamada.INTERNACIONAL.name(),
+                new CalculadorLlamadaInternacional(1.5F));
+        this.estrategiasCalculo.put(TipoLlamada.NACIONAL.name(),
+                new CalculadorLlamadaNacional(1.1F));
     }
 
     public double calcularCosto() {
-        double costo = 0;
-        boolean promocion = false;
+        assertTipoLLamadaValido();
+        return this.estrategiasCalculo.get(this.tipo.name()).costo(this.duracion);
+    }
 
-        if (tipo == TipoLlamada.NACIONAL) {
-            costo = 1.1 * duracion;
-            if (duracion > 30) {
-                promocion = true;
-            }
-        } else if (tipo == TipoLlamada.INTERNACIONAL) {
-            costo = 1.5 * duracion;
-            if (duracion > 20) {
-                promocion = true;
-            }
+    private void assertTipoLLamadaValido() {
+        if (!this.estrategiasCalculo.containsKey(this.tipo.name())) {
+            throw new RuntimeException("Tipo de llamada inexistente");
         }
-
-        if (promocion) {
-            costo = costo - (costo * 0.05);
-        }
-        return costo;
     }
 }
-

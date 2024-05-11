@@ -8,10 +8,10 @@ public class CalculadorLlamadaNacional implements CalculadorLlamada {
     }
 
     @Override
-    public float costo(float duracion) {
-        float costo = this.costoXMinuto * duracion;
+    public double costo(double duracion) {
+        double costo = this.costoXMinuto * duracion;
         if (duracion > 30) {
-            costo *= 0.9;
+            costo = costo - (costo * 0.05F);
         }
         return costo;
     }
