@@ -1,6 +1,8 @@
 package strategy;
 
 public class CalculadorLlamadaInternacional implements CalculadorLlamada {
+    public static final float DESCUENTO = 0.05F;
+    public static final int MAX_DURACION_SIN_DESCUENTO = 20;
     private float costoXMinuto;
 
     public CalculadorLlamadaInternacional(float costoXMinuto) {
@@ -9,9 +11,9 @@ public class CalculadorLlamadaInternacional implements CalculadorLlamada {
 
     @Override
     public double costo(double duracion) {
-        double costo = 1.5F * duracion;
-        if (duracion > 20) {
-            costo = costo - (costo * 0.05F);
+        double costo = this.costoXMinuto * duracion;
+        if (duracion > MAX_DURACION_SIN_DESCUENTO) {
+            costo = costo - (costo * DESCUENTO);
         }
         return costo;
     }
