@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dc95eca-e5e9-4421-a9ba-a890ddd18acd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Juego.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Jugada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prepaga.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prestacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/TipoPrestacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/TipoPrestador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dd/ejercicio1/JugadaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dd/ejercicio2/PrepagaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="6dc95eca-e5e9-4421-a9ba-a890ddd18acd" name="Changes" comment="agrego dd">
+      <change afterPath="$PROJECT_DIR$/diagramas/piedra_papel_tijera.graphml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagramas/prestadores.graphml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +22,11 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="solucion-dd-ejercicio1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -70,7 +63,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/enrique/workspaces/oop2-patterns3/src/main/java/dd/ejercicio2",
+    "last_opened_file_path": "/home/enrique/workspaces/oop2-patterns3/diagramas",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,6 +78,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/diagramas" />
       <recent name="$PROJECT_DIR$/src/main/java/dd/ejercicio2" />
       <recent name="$PROJECT_DIR$/src/main/java/dd/ejercicio1" />
     </key>
@@ -134,6 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.dd in oop2-patterns3" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.dd in oop2-patterns3" />
       </list>
