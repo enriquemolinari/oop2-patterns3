@@ -41,6 +41,7 @@ class SistemaDeCombate {
         switch (ataqueActual) {
             // Combinaciones específicas
             case Ataque(Guerrero g, Espada es, EscudoMadera em) ->
+                //new AtaqueGerreroEspadaEscudoMadera().atacar(...);
                     System.out.println("Guerrero ataca con Espada: El escudo de madera se astilla brutalmente.");
 
             case Ataque(Guerrero g, Baston b, EscudoMadera em) ->
@@ -65,9 +66,8 @@ class SistemaDeCombate {
                     System.out.println("Mago dispara fuego con Bastón: ¡El escudo de madera arde en cenizas!");
 
             // El caso default solo necesario si NO uso sealed classes
-            default -> {
-                System.out.println("Ataque genérico: El escudo resiste el impacto.");
-            }
+            default ->
+                    System.out.println("Ataque genérico: El escudo resiste el impacto.");
         }
     }
 }
