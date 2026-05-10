@@ -1,16 +1,23 @@
 package dd.multiple.switchcase;
 
-// 1. Personajes
+//sealed interface Personaje permits Guerrero, Mago {
+//}
+//
+//sealed interface Arma permits Espada, Baston {
+//}
+//
+//sealed interface Escudo permits EscudoMadera, EscudoMagico {
+//}
+
 interface Personaje {
 }
 
-// 2. Armas
 interface Arma {
 }
 
-// 3. Escudos
 interface Escudo {
 }
+
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +29,6 @@ public class Main {
 
         // Magia moderna:
         combate.resolverAtaque(atacante, arma, defensa);
-        // Imprime: "Guerrero ataca con Espada: El escudo de madera se astilla brutalmente."
     }
 }
 
@@ -37,17 +43,28 @@ class SistemaDeCombate {
             case Ataque(Guerrero g, Espada es, EscudoMadera em) ->
                     System.out.println("Guerrero ataca con Espada: El escudo de madera se astilla brutalmente.");
 
-            case Ataque(Mago m, Baston b, EscudoMadera em) ->
-                    System.out.println("Mago dispara fuego con Bastón: ¡El escudo de madera arde en cenizas!");
+            case Ataque(Guerrero g, Baston b, EscudoMadera em) ->
+                    System.out.println("Guerrero ataca con Espada: El escudo de madera se astilla brutalmente.");
 
             case Ataque(Guerrero g, Baston b, EscudoMagico em) ->
                     System.out.println("Guerrero golpea con Bastón el Escudo Mágico: El escudo absorbe el golpe físico sin problema.");
 
-            // Podemos agrupar casos genéricos si no nos importa el arma específica
-            case Ataque(Mago m, Arma cualquierArma, EscudoMagico em) ->
+            case Ataque(Guerrero g, Espada es, EscudoMagico em) ->
+                    System.out.println("Guerrero golpea con Bastón el Escudo Mágico: El escudo absorbe el golpe físico sin problema.");
+
+            case Ataque(Mago m, Baston b, EscudoMadera em) ->
+                    System.out.println("Mago dispara fuego con Bastón: ¡El escudo de madera arde en cenizas!");
+
+            case Ataque(Mago m, Baston cualquierArma, EscudoMagico em) ->
                     System.out.println("Un Mago ataca un Escudo Mágico: Sus energías chocan creando chispas.");
 
-            // El caso "catch-all" (default) para las combinaciones que no declaramos explícitamente
+            case Ataque(Mago m, Espada es, EscudoMadera em) ->
+                    System.out.println("Mago dispara fuego con Bastón: ¡El escudo de madera arde en cenizas!");
+
+            case Ataque(Mago m, Espada es, EscudoMagico em) ->
+                    System.out.println("Mago dispara fuego con Bastón: ¡El escudo de madera arde en cenizas!");
+
+            // El caso default solo necesario si NO uso sealed classes
             default -> {
                 System.out.println("Ataque genérico: El escudo resiste el impacto.");
             }
@@ -58,20 +75,20 @@ class SistemaDeCombate {
 record Ataque(Personaje personaje, Arma arma, Escudo escudo) {
 }
 
-record Guerrero() implements Personaje {
+final class Guerrero implements Personaje {
 }
 
-record Mago() implements Personaje {
+final class Mago implements Personaje {
 }
 
-record Espada() implements Arma {
+final class Espada implements Arma {
 }
 
-record Baston() implements Arma {
+final class Baston implements Arma {
 }
 
-record EscudoMadera() implements Escudo {
+final class EscudoMadera implements Escudo {
 }
 
-record EscudoMagico() implements Escudo {
+final class EscudoMagico implements Escudo {
 }
