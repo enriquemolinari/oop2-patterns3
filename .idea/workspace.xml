@@ -4,16 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dc95eca-e5e9-4421-a9ba-a890ddd18acd" name="Changes" comment="cambio a clases y agrego la opcion con sealed clases para que el compilador detecte las distintas posibilidades">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/ElementoJuego.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Papel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Piedra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Tijera.java" afterDir="false" />
+    <list default="true" id="6dc95eca-e5e9-4421-a9ba-a890ddd18acd" name="Changes" comment="solucion usando double dispatch">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/AtencionMedica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/CategoriaPrestacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Clinica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Hospital.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Internacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prestador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Sanatorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagramas/piedra_papel_tijera.graphml" beforeDir="false" afterPath="$PROJECT_DIR$/diagramas/piedra_papel_tijera.graphml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Jugada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Jugada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dd/ejercicio1/JugadaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dd/ejercicio1/JugadaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prepaga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prepaga.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prestacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prestacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/TipoPrestacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/TipoPrestador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dd/ejercicio2/PrepagaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dd/ejercicio2/PrepagaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -45,7 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="solucion-dd-ejercicio1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,12 +88,13 @@
     "Application.dd.multiple.sobrecarga.Main.executor": "Debug",
     "Application.dd.multiple.switchcase.Main.executor": "Debug",
     "JUnit.JugadaTest.executor": "Run",
+    "JUnit.PrepagaTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "solucion-dd-ejercicio1",
+    "git-widget-placeholder": "solucion-dd-ejercicio2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/enrique/workspaces/oop2-patterns3/diagramas",
     "node.js.detected.package.eslint": "true",
@@ -100,7 +106,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -117,26 +123,13 @@
       <recent name="dd.ejercicio1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JugadaTest">
+  <component name="RunManager" selected="JUnit.PrepagaTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dd.ejercicio1.Main" />
       <module name="oop2-patterns3" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dd.ejercicio1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="dd.multiple.sobrecarga.Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dd.multiple.sobrecarga.Main" />
-      <module name="oop2-patterns3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dd.multiple.sobrecarga.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,6 +178,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PrepagaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop2-patterns3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dd.ejercicio2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dd.ejercicio2" />
+      <option name="MAIN_CLASS_NAME" value="dd.ejercicio2.PrepagaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="main" />
       <method v="2">
@@ -198,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PrepagaTest" />
         <item itemvalue="JUnit.JugadaTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.dd.multiple.switchcase.Main" />
         <item itemvalue="Application.dd.multiple.sobrecarga.Main" />
-        <item itemvalue="Application.dd.multiple.sobrecarga.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778424790574</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="solucion usando double dispatch">
+      <option name="closed" value="true" />
+      <created>1778440737020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778440737020</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,18 +275,8 @@
     <MESSAGE value="agrego diagramas dd" />
     <MESSAGE value="agrego cuestiones sobre multiple dispatch" />
     <MESSAGE value="cambio a clases y agrego la opcion con sealed clases para que el compilador detecte las distintas posibilidades" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio a clases y agrego la opcion con sealed clases para que el compilador detecte las distintas posibilidades" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dd/ejercicio1/Jugada.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="solucion usando double dispatch" />
+    <option name="LAST_COMMIT_MESSAGE" value="solucion usando double dispatch" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

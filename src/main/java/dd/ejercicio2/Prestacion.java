@@ -1,19 +1,15 @@
 package dd.ejercicio2;
 
 public class Prestacion {
-    private TipoPrestacion prestacion;
-    private TipoPrestador prestador;
+    private CategoriaPrestacion prestacion;
+    private Prestador prestador;
 
-    public Prestacion(TipoPrestador prestador, TipoPrestacion prestacion) {
+    public Prestacion(Prestador prestador, CategoriaPrestacion prestacion) {
         this.prestacion = prestacion;
         this.prestador = prestador;
     }
 
-    public TipoPrestador tipoPrestador() {
-        return this.prestador;
-    }
-
-    public TipoPrestacion tipoPrestacion() {
-        return this.prestacion;
+    public float costo() {
+        return this.prestador.costo(this.prestacion);
     }
 }

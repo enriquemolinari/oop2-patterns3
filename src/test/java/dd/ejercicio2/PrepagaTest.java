@@ -18,50 +18,49 @@ public class PrepagaTest {
 
     @Test
     void testFacturaConsultaEnClinica() {
-        double total = prepaga.facturar(List.of(new Prestacion(TipoPrestador.CLINICA, TipoPrestacion.CONSULTA_MEDICA)));
+        double total = prepaga.facturar(List.of(new Prestacion(new Clinica(), new AtencionMedica())));
         assertEquals(20000, total);
     }
 
     @Test
     void testFacturaConsultaEnHospital() {
-        double total = prepaga.facturar(List.of(new Prestacion(TipoPrestador.HOSPITAL, TipoPrestacion.CONSULTA_MEDICA)));
+        double total = prepaga.facturar(List.of(new Prestacion(new Hospital(), new AtencionMedica())));
         assertEquals(0, total);
     }
 
     @Test
     void testFacturaConsultaEnSanatorio() {
-        double total = prepaga.facturar(List.of(new Prestacion(TipoPrestador.SANATORIO, TipoPrestacion.CONSULTA_MEDICA)));
+        double total = prepaga.facturar(List.of(new Prestacion(new Sanatorio(), new AtencionMedica())));
         assertEquals(15000, total);
     }
 
     @Test
     void testFacturaInternacionEnClinica() {
-        double total = prepaga.facturar(List.of(new Prestacion(TipoPrestador.CLINICA, TipoPrestacion.INTERNACION)));
+        double total = prepaga.facturar(List.of(new Prestacion(new Clinica(), new Internacion())));
         assertEquals(65000, total);
     }
 
     @Test
     void testFacturaInternacionEnHospital() {
-        double total = prepaga.facturar(List.of(new Prestacion(TipoPrestador.HOSPITAL, TipoPrestacion.INTERNACION)));
+        double total = prepaga.facturar(List.of(new Prestacion(new Hospital(), new Internacion())));
         assertEquals(35000, total);
     }
 
     @Test
     void testFacturaInternacionEnSanatorio() {
-        double total = prepaga.facturar(List.of(new Prestacion(TipoPrestador.SANATORIO, TipoPrestacion.INTERNACION)));
+        double total = prepaga.facturar(List.of(new Prestacion(new Sanatorio(), new Internacion())));
         assertEquals(75000, total);
     }
 
     @Test
     void testAcumulaImportesDeMultiplesPrestaciones() {
         List<Prestacion> prestaciones = List.of(
-                new Prestacion(TipoPrestador.CLINICA, TipoPrestacion.CONSULTA_MEDICA),
-                new Prestacion(TipoPrestador.HOSPITAL, TipoPrestacion.INTERNACION),
-                new Prestacion(TipoPrestador.SANATORIO, TipoPrestacion.INTERNACION)
+                new Prestacion(new Clinica(), new AtencionMedica()),
+                new Prestacion(new Hospital(), new Internacion()),
+                new Prestacion(new Sanatorio(), new Internacion())
         );
 
         double total = prepaga.facturar(prestaciones);
         assertEquals(130000, total);
     }
-
 }
