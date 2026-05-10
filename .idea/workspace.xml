@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dc95eca-e5e9-4421-a9ba-a890ddd18acd" name="Changes" comment="agrego dd">
-      <change afterPath="$PROJECT_DIR$/diagramas/piedra_papel_tijera.graphml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diagramas/prestadores.graphml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/multiple/dispatch/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/multiple/sobrecarga/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/multiple/switchcase/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +19,20 @@
     <persistenceIdMap>
       <entry key="_/home/enrique/workspaces/oop2-patterns3/src/main" value="3DPVM4t98bfCd6m0gpHxVRReTZM" />
     </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="agent-panel" value="GPT-5.3-Codex" />
+      <entry key="chat-panel" value="GPT-5.3-Codex" />
+    </selectedModels>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FormatOnSaveOptions">
     <option name="myRunOnSave" value="true" />
@@ -56,12 +72,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.dd.multiple.s1.Main.executor": "Debug",
+    "Application.dd.multiple.sobrecarga.Main (1).executor": "Run",
+    "Application.dd.multiple.sobrecarga.Main.executor": "Debug",
+    "Application.dd.multiple.switchcase.Main.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "solucion-dd-ejercicio1",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/enrique/workspaces/oop2-patterns3/diagramas",
     "node.js.detected.package.eslint": "true",
@@ -82,18 +102,60 @@
       <recent name="$PROJECT_DIR$/src/main/java/dd/ejercicio2" />
       <recent name="$PROJECT_DIR$/src/main/java/dd/ejercicio1" />
     </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="dd.multiple.JugadaDeTeclado" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dd.ejercicio2" />
       <recent name="dd.ejercicio1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="observer.ui.Main" />
+  <component name="RunManager" selected="Application.dd.multiple.switchcase.Main">
+    <configuration name="dd.multiple.dispatch.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dd.multiple.dispatch.Main" />
       <module name="oop2-patterns3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="observer.ui.*" />
+          <option name="PATTERN" value="dd.multiple.dispatch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dd.multiple.sobrecarga.Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dd.multiple.sobrecarga.Main" />
+      <module name="oop2-patterns3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dd.multiple.sobrecarga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dd.multiple.sobrecarga.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dd.multiple.sobrecarga.Main" />
+      <module name="oop2-patterns3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dd.multiple.sobrecarga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dd.multiple.switchcase.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dd.multiple.switchcase.Main" />
+      <module name="oop2-patterns3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dd.multiple.switchcase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,9 +190,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.dd in oop2-patterns3" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.dd.multiple.switchcase.Main" />
+        <item itemvalue="Application.dd.multiple.sobrecarga.Main" />
+        <item itemvalue="Application.dd.multiple.sobrecarga.Main (1)" />
+        <item itemvalue="Application.dd.multiple.dispatch.Main" />
         <item itemvalue="JUnit.dd in oop2-patterns3" />
       </list>
     </recent_temporary>
@@ -143,10 +206,34 @@
       <option name="presentableId" value="Default" />
       <updated>1778183642344</updated>
     </task>
+    <task id="LOCAL-00001" summary="agrego diagramas dd">
+      <option name="closed" value="true" />
+      <created>1778354889992</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778354889992</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="agrego diagramas dd" />
+    <option name="LAST_COMMIT_MESSAGE" value="agrego diagramas dd" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
