@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dc95eca-e5e9-4421-a9ba-a890ddd18acd" name="Changes" comment="cambio a clases y agrego la opcion con sealed clases para que el compilador detecte las distintas posibilidades">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/ElementoJuego.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Papel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Piedra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Tijera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dd/multiple/switchcase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/multiple/switchcase/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagramas/piedra_papel_tijera.graphml" beforeDir="false" afterPath="$PROJECT_DIR$/diagramas/piedra_papel_tijera.graphml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Jugada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Jugada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dd/ejercicio1/JugadaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dd/ejercicio1/JugadaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="solucion-dd-ejercicio1" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,10 +77,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Debug",
     "Application.dd.multiple.s1.Main.executor": "Debug",
     "Application.dd.multiple.sobrecarga.Main (1).executor": "Run",
     "Application.dd.multiple.sobrecarga.Main.executor": "Debug",
     "Application.dd.multiple.switchcase.Main.executor": "Debug",
+    "JUnit.JugadaTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -108,13 +117,13 @@
       <recent name="dd.ejercicio1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.dd.multiple.switchcase.Main">
-    <configuration name="dd.multiple.dispatch.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dd.multiple.dispatch.Main" />
+  <component name="RunManager" selected="JUnit.JugadaTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dd.ejercicio1.Main" />
       <module name="oop2-patterns3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dd.multiple.dispatch.*" />
+          <option name="PATTERN" value="dd.ejercicio1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,16 +170,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dd in oop2-patterns3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JugadaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop2-patterns3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dd.*" />
+          <option name="PATTERN" value="dd.ejercicio1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dd" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="dd.ejercicio1" />
+      <option name="MAIN_CLASS_NAME" value="dd.ejercicio1.JugadaTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JugadaTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.dd.multiple.switchcase.Main" />
         <item itemvalue="Application.dd.multiple.sobrecarga.Main" />
         <item itemvalue="Application.dd.multiple.sobrecarga.Main (1)" />
-        <item itemvalue="Application.dd.multiple.dispatch.Main" />
-        <item itemvalue="JUnit.dd in oop2-patterns3" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +260,17 @@
     <MESSAGE value="agrego cuestiones sobre multiple dispatch" />
     <MESSAGE value="cambio a clases y agrego la opcion con sealed clases para que el compilador detecte las distintas posibilidades" />
     <option name="LAST_COMMIT_MESSAGE" value="cambio a clases y agrego la opcion con sealed clases para que el compilador detecte las distintas posibilidades" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dd/ejercicio1/Jugada.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
