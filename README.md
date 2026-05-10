@@ -46,11 +46,20 @@ Las prestaciones cuestan diferente segun el tipo de prestador que las realice, l
 | Consulta    | Gratuito           | $20000                      | $15000                                       |
 | Internacion | Costo del Material | $50000 + gastos internacion | $40000 + costo material + gastos internacion |
 
-## Ejercicio Golondrinas
+### Ejercicio Golondrinas
 
 - Máximo Prieto y Hernan Wilkinson:
     - Webinar: https://www.youtube.com/watch?v=bVC1OLOJIQQ
     - https://github.com/pablolucero/golondrinas-double-dispatch
+
+### ¿Y si tengo doble dispatch, puedo tener triple o cuadruple dispatch?
+
+- Sí, pero no es común. El double dispatch es el caso más común de múltiples dispatch. El triple o cuádruple dispatch se
+  refiere a situaciones donde se necesitan tres o cuatro objetos para determinar qué método se debe invocar.
+- Lenguajes como [Julia](http://julialang.org/) soportan múltiples dispatch de forma nativa, lo que permite a los
+  desarrolladores definir métodos que se seleccionan en función de los tipos de múltiples argumentos.
+- Revisar el branch `solucion-dd-ejercicio1` para comparar contra opciones en lenguajes con multiple dispatch nativo.
+  Aca un pequeño repo con un ejemplo en [Julia](https://github.com/enriquemolinari/oop2-multiple-dispatch-con-julia).
 
 ## Strategy:
 
