@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class CajeroUI {
 
@@ -16,7 +17,8 @@ public class CajeroUI {
     }
 
     public void iniciar() {
-        CuentaBancaria cuenta = new CuentaBancaria(0);
+        var monitor1 = List.of(this.monitor, new ConsoleUI());
+        CuentaBancaria cuenta = new CuentaBancaria(monitor1, 0);
 
         JFrame dialog = new JFrame("Cajero Automático");
         JButton button = new JButton("Depositar $1000");
@@ -28,7 +30,7 @@ public class CajeroUI {
                 //o si quiero mandar un email al gerente del banco en los casos donde el saldo supere los 10 millones
                 //¿ ?
                 cuenta.depositar(1000);
-                monitor.nuevoMonto(cuenta.saldo());
+//                monitor.nuevoMonto(cuenta.saldo());
             }
         });
 

@@ -1,18 +1,22 @@
 package observer.model;
 
-public class CuentaBancaria {
+import java.util.List;
 
-	private double monto;
-	
-	public CuentaBancaria(double monto) {
-		this.monto = monto;
-	}
-	
-	public void depositar(double monto) {
-		this.monto += monto;
-	}
-	
-	public String saldo() {
-		return "$" + monto;
-	}
+public class CuentaBancaria extends Observado {
+
+    private double monto;
+
+    public CuentaBancaria(List<Observer> observers, double monto) {
+        super(observers);
+        this.monto = monto;
+    }
+
+    public void depositar(double monto) {
+        this.monto += monto;
+        this.notificar(this.monto);
+    }
+
+    public String saldo() {
+        return "$" + monto;
+    }
 }
