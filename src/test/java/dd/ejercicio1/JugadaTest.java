@@ -38,7 +38,7 @@ public class JugadaTest {
 
     @Test
     void testPapelLeGanaAPiedra() {
-        String resultado = new Jugada().jugar(new Papel(), new Tijera());
+        String resultado = new Jugada().jugar(new Papel(), new Piedra());
         assertEquals(Jugada.GANASTE, resultado);
     }
 
