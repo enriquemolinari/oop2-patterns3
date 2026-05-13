@@ -1,4 +1,4 @@
 package dd.ejercicio1;
 
-public class Papel implements ElementoDeJuego {
+public class Papel extends ElementoDeJuego {
 }

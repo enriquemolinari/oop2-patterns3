@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dc95eca-e5e9-4421-a9ba-a890ddd18acd" name="Changes" comment="fix test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/AtencionMedica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/CategoriaPrestacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Clinica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Hospital.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Internacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prestador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Sanatorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prepaga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prepaga.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prestacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio2/Prestacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dd/ejercicio2/PrepagaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dd/ejercicio2/PrepagaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/ElementoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/ElementoDeJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Papel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Papel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Piedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Piedra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Tijera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dd/ejercicio1/Tijera.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +54,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="solucion-dd-ejercicio1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
