@@ -20,8 +20,7 @@
 ## Double Dispatch
 
 - El double dispatch permite a un objeto llamar a un método en otro objeto, pasando como argumento al primer objeto.
-  Esto
-  permite que el segundo objeto pueda realizar una operación específica basada en el tipo del primer objeto.
+  Esto permite que el segundo objeto pueda realizar una operación específica basada en el tipo del primer objeto.
 - El patron de diseño Visitor es una generalización del double dispatch.
 
 ### Ejercicio 1
