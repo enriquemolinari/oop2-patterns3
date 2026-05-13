@@ -1,6 +1,5 @@
 package dd.multiple.sobrecarga;
 
-
 interface Personaje {
 }
 
@@ -10,7 +9,6 @@ interface Arma {
 interface Escudo {
 }
 
-
 public class Main {
     public static void main(String[] args) {
         Personaje atacante = new Guerrero();
@@ -18,7 +16,6 @@ public class Main {
         Escudo defensa = new EscudoMadera();
 
         Arbitro arbitro = new Arbitro();
-
         // ¿Qué crees que va a imprimir esto?
         arbitro.resolverAtaque(atacante, arma, defensa);
     }
